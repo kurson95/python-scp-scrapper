@@ -117,23 +117,25 @@ def menu(x):
     elif x.isdigit():
         article(x)
     elif x =='help':
-        print('commands: database , help , exit , logo , clear' )
+        print('commands: database , help , exit , logo , clear ,deus')
     elif x == 'logo':
         logo()
     elif x =='clear':
         cls()
+    elif x =='deus':
+        deus()
     else:
         print('Wrong command!')
-        deus()
+        
 def deus():
     print('Digital Environmental Universal System ver 0.2.18.95')
     while True:
         command = input('scp@deus:$ ')
         if command == 'ls':
             print(os.listdir("database/"))
-        if command == 'logoff':
+        if command == 'exit':
             break
-        
+cls()      
 logo()
 
 print('Type \'database\' to show list of scp\'s or scp number (3 digits) to show database entry.\nTyping \'exit\' will close the program.')
